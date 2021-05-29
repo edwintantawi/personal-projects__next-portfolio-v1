@@ -14,6 +14,12 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
             rel="stylesheet"></link>
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body style={{ height: 9999 }}>
           <Main />
