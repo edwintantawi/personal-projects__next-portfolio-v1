@@ -14,8 +14,11 @@ module.exports = {
         hero: 'url("/hero.svg")',
       }),
       screens: {
-        xs: '360px',
+        xs: '90%',
         ...defaultTheme.screens,
+      },
+      boxShadow: {
+        card: '0 -5px 30px -10px rgba(0, 0, 0, 0.16)',
       },
     },
     fontFamily: {
@@ -23,6 +26,7 @@ module.exports = {
     },
     container: {
       center: true,
+      padding: '1rem',
     },
   },
   variants: {
