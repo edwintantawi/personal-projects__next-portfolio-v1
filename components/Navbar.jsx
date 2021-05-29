@@ -16,10 +16,6 @@ const Navbar = () => {
   const [isActiveMenu, setIsActiveMenu] = useState(false);
   const route = useRouter().route;
 
-  document
-    .querySelector('body')
-    .addEventListener('click', handleToggleMenuClick);
-
   const handleToggleMenuClick = (event) => {
     setIsActiveMenu((prev) => !prev);
     event.stopPropagation();
