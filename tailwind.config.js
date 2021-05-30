@@ -14,7 +14,7 @@ module.exports = {
         hero: 'url("/hero.svg")',
       }),
       screens: {
-        xs: '90%',
+        xs: '500px',
         ...defaultTheme.screens,
       },
       boxShadow: {

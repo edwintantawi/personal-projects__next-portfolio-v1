@@ -21,7 +21,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body style={{ height: 9999 }}>
+        <body>
           <Main />
           <NextScript />
         </body>
