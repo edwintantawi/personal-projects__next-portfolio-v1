@@ -5,15 +5,16 @@ import Navbar from '../components/Navbar';
 import dataSite from '../data/data-site';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
+import PageWraper from '../components/PageWraper';
 
 const Home = () => {
   return (
-    <div>
+    <PageWraper>
       <PageHead />
       <Navbar />
 
-      <main>
-        <section className="h-screen bg-hero bg-center bg-cover xl:bg-contain bg-no-repeat -mt-12 md:-mt-20 flex items-center">
+      <main className="flex-grow">
+        <section className="h-screen bg-hero bg-center bg-cover xl:bg-contain bg-no-repeat -mt-12 flex items-center">
           <div className="container-sm sm:container px-3 -mt-14 mx-auto text-center md:text-left">
             <div className="flex">
               <span className="flex items-center mx-auto md:mx-0">
@@ -78,9 +79,9 @@ const Home = () => {
                 <img
                   src={item.icon}
                   alt={item.title}
-                  className="w-5 h-5 md:w-10 md:h-10"
+                  className="w-5 h-5 md:w-8 md:h-8"
                 />
-                <h3 className="font-medium text-black-900 text-xs md:text-base">
+                <h3 className="font-medium text-black-900 text-xs md:text-sm">
                   {item.title}
                 </h3>
               </div>
@@ -90,27 +91,29 @@ const Home = () => {
 
         <Section title="A PROJECT I COMPLETED">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-5">
-            {dataSite.projects.map((item) => (
-              <div
-                key={item.title}
-                className="border border-gray-300 rounded-lg pt-7 px-6 text-center overflow-hidden h-60 sm:h-96 md:h-80 2xl:h-80 group md:last:col-span-2 xl:last:col-span-1">
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition duration-300 hover:text-orange">
-                  <h3 className="font-semibold text-lg sm:text-xl text-black-500">
-                    {item.title}
-                  </h3>
-                </a>
-                <p className="text-xs text-gray-500 mb-4">{item.stack}</p>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="min-w-full shadow-card w-full transform translate-y-8 transition duration-500 group-hover:translate-y-2 cursor-pointer"
-                />
-              </div>
-            ))}
+            {dataSite.projects
+              .filter((filteredItem) => filteredItem.top)
+              .map((item) => (
+                <div
+                  key={item.title}
+                  className="border border-gray-300 rounded-lg pt-7 px-6 text-center overflow-hidden h-60 sm:h-96 md:h-80 2xl:h-80 group md:last:col-span-2 xl:last:col-span-1">
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition duration-300 hover:text-orange">
+                    <h3 className="font-semibold text-lg sm:text-xl text-black-500">
+                      {item.title}
+                    </h3>
+                  </a>
+                  <p className="text-xs text-gray-500 mb-4">{item.stack}</p>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="min-w-full shadow-card w-full transform translate-y-8 transition duration-500 group-hover:translate-y-2"
+                  />
+                </div>
+              ))}
           </div>
           <div className="text-center mt-5 md:mt-8">
             <Link href="/project">
@@ -136,7 +139,7 @@ const Home = () => {
       </main>
 
       <Footer />
-    </div>
+    </PageWraper>
   );
 };
 

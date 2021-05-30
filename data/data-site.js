@@ -1,10 +1,14 @@
 const dataSite = {
   naviagtion: [
-    { title: 'Home', url: '/' },
-    { title: 'Resume', url: '/resume' },
-    { title: 'Project', url: '/project' },
-    { title: 'About Me', url: '/aboutme' },
-    { title: 'Contact Me', url: '/contactme' },
+    { title: 'Home', url: '/', icon: 'fas fa-home' },
+    { title: 'Resume', url: '/resume', icon: 'fas fa-file-alt' },
+    { title: 'Project', url: '/project', icon: 'fas fa-tools' },
+    {
+      title: 'About',
+      url: '/aboutme',
+      icon: 'fas fa-user-circle',
+    },
+    { title: 'Contact', url: '/contactme', icon: 'fas fa-address-card' },
   ],
   hero: {
     name: 'Edwin Tantawi',
@@ -70,7 +74,7 @@ const dataSite = {
     {
       top: true,
       image:
-        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fcookingbox.png?alt=media&token=10942a89-bc49-4c87-b470-59ec3f3b7de0',
+        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fcookingbox.png?alt=media',
       title: 'CookingBox',
       stack: 'HTML, CSS, PWA',
       link: 'https://cookingboxs.netlify.app',
@@ -78,7 +82,7 @@ const dataSite = {
     {
       top: true,
       image:
-        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fnetflix-clone.png?alt=media&token=e28e7546-72f7-453d-b4d8-43cf176dad62',
+        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fnetflix-clone.png?alt=media',
       title: 'Netflix Clone',
       stack: 'React JS, CSS, TMDB API',
       link: 'https://clone-netflix-web.netlify.app/',
@@ -86,7 +90,7 @@ const dataSite = {
     {
       top: true,
       image:
-        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fwhatsapp-clone.png?alt=media&token=d414401c-6212-48eb-ad4c-a6ba355473a8',
+        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fwhatsapp-clone.png?alt=media',
       title: 'Whatsapp Clone',
       stack: 'React JS, CSS, Firebase',
       link: 'https://clone-whatsapp-web.netlify.app/',
@@ -94,7 +98,7 @@ const dataSite = {
     {
       top: false,
       image:
-        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fweneeddev.png?alt=media&token=dbf78aa1-f913-4e16-b82b-56b52166e510',
+        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fweneeddev.png?alt=media',
       title: 'WeNeedDev',
       stack: 'HTML, CSS, Bootstrap 5',
       link: 'https://weneeddev.netlify.app/',
@@ -102,7 +106,7 @@ const dataSite = {
     {
       top: false,
       image:
-        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fpinterest-clone.png?alt=media&token=7d26b062-67df-4878-bad9-1a44d8f37def',
+        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fpinterest-clone.png?alt=media',
       title: 'Pinterest Clone',
       stack: 'React JS, CSS, Unsplash API',
       link: 'https://clone-pinterest-web.netlify.app/',
@@ -110,12 +114,73 @@ const dataSite = {
     {
       top: false,
       image:
-        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fgoogle-clone.png?alt=media&token=4a493a1e-896f-4dd0-8a02-df03d53ab9f4',
+        'https://firebasestorage.googleapis.com/v0/b/edwintantawi-25f09.appspot.com/o/projects%2Fgoogle-clone.png?alt=media',
       title: 'Google Clone',
       stack: 'React JS, CSS, Google API',
       link: 'https://clone-google-web.netlify.app/',
     },
   ],
+  resume: [
+    {
+      timestamp: '11-May-2021 - Present',
+      title: 'IDCamp 2021',
+      subtitle: 'Back-end Learning Path',
+      descriptions:
+        'Take a scholarship to study Programming at Dicoding Academy from Indosat',
+      list: [
+        {
+          title: 'Belajar Dasar Pemrograman JavaScript',
+          level: 'Beginner',
+          link: 'https://www.dicoding.com/certificates/RVZK4QLMMPD5',
+        },
+        {
+          title: 'Belajar Membuat Aplikasi Back-End untuk Pemula',
+          level: 'Beginner',
+          link: 'https://www.dicoding.com/certificates/MEPJ504OLP3V',
+        },
+      ],
+    },
+    {
+      timestamp: '28-Apr-2021 - 10-May-2021',
+      title: 'Baparekraf Development Day 2021',
+      subtitle: 'Front-End Learning Path',
+      descriptions:
+        'Take a scholarship to study Programming at Dicoding Academy from Baparekraf Development Day',
+      list: [
+        {
+          title: 'Menjadi Front-End Web Developer Expert',
+          level: 'Expert',
+          link: 'https://www.dicoding.com/certificates/81P21DGOJZOY',
+        },
+      ],
+    },
+  ],
 };
 
 export default dataSite;
+// {
+//   dataSite.resume.map((item, index) => (
+//     <Timeline
+//       timestamp={item.timestamp}
+//       title={item.title}
+//       subtitle={item.subtitle}
+//       descriptions={item.descriptions}
+//       list={item.list}
+//     />
+//   ));
+// }
+
+// timestamp="20-Jul-2020 - 9-Aug-2020"
+//           title="Baparekraf Development Day 2020"
+//           subTitle="Front-End Learning Path [ Beginer, intermediate ]"
+//           list={[
+//             {
+//               title: 'title',
+//               level: 'level',
+//             },
+//             {
+//               title: 'title',
+//               level: 'level',
+//             },
+//           ]}
+//           descriptions="Take a scholarship to study Programming at Dicoding Academy from Baparekraf Development Day by Kemenparekraf"

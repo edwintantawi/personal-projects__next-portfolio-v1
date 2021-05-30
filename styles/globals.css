@@ -7,5 +7,14 @@
 }
 .link-active::after {
   content: '';
-  @apply absolute h-[2.5px] bg-orange-gradient left-0 right-0 bottom-0 rounded-full;
+  @apply absolute h-[3px] bg-orange-gradient left-0 right-0 -bottom-1 rounded-full;
 }
+
+/* .timeline-tree {
+  @apply relative h-96;
+}
+
+.timeline-tree::before {
+  content: '';
+  @apply absolute w-px h-full top-0 bottom-0 left-1/2 transform translate-x-1/2 -ml-px bg-black;
+} */
