@@ -1,15 +1,26 @@
-const Section = ({ title = '', near = false, className, children }) => {
+const Section = ({
+  title = '',
+  smallSection = false,
+  align = 'center',
+  className,
+  children,
+}) => {
   const baseTitle = title.split(' ').slice(0, -1).join(' ');
-  const formatedTitle = title.split(' ').pop();
+  const formattedTitle = title.split(' ').pop();
 
   return (
     <section className={`${className} py-14 md:py-20`}>
       <div className="container">
-        <header className={`${near ? 'mb-2 md:mb-4' : 'mb-5 md:mb-10'}`}>
+        <header
+          className={`${smallSection ? 'mb-1 md:mb-3' : 'mb-5 md:mb-10'}`}
+        >
           <h2
             className={`text-black-900 font-bold
-              text-xl md:text-3xl text-center`}>
-            {baseTitle} <span className="text-orange">{formatedTitle}</span>
+              text-xl md:text-3xl ${
+                align === 'left' ? 'text-left' : 'text-center'
+              }`}
+          >
+            {baseTitle} <span className="text-orange">{formattedTitle}</span>
           </h2>
         </header>
         {children}

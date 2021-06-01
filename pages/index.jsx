@@ -1,6 +1,5 @@
 import PageHead from '../components/PageHead';
 import Link from 'next/link';
-import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import dataSite from '../data/data-site';
 import Section from '../components/Section';
@@ -19,7 +18,7 @@ const Home = () => {
             <div className="flex">
               <span className="flex items-center mx-auto md:mx-0">
                 Hi, I'm
-                <span className="inline-block w-6 md:w-10 bg-orange-gradient h-1 ml-2"></span>
+                <span className="inline-block w-6 md:w-10 bg-orange-gradient h-1 ml-2" />
               </span>
             </div>
             <h1 className="font-bold text-black-900 text-5xl sm:text-7xl lg:text-8xl">
@@ -51,7 +50,8 @@ const Home = () => {
             {dataSite.what_can_i_do.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-300 p-8 md:p-10 rounded-lg">
+                className="border border-gray-300 p-8 md:p-10 rounded-lg"
+              >
                 <div className="flex items-center mb-4">
                   <img
                     src={item.icon}
@@ -75,7 +75,8 @@ const Home = () => {
             {dataSite.skills_technology.map((item) => (
               <div
                 key={item.title}
-                className="flex items-center space-x-1 md:space-x-3 mb-2 p-3 md:p-4 border border-gray-300 rounded-lg">
+                className="flex items-center space-x-1 md:space-x-3 mb-2 p-3 md:p-4 border border-gray-300 rounded-lg"
+              >
                 <img
                   src={item.icon}
                   alt={item.title}
@@ -96,12 +97,14 @@ const Home = () => {
               .map((item) => (
                 <div
                   key={item.title}
-                  className="border border-gray-300 rounded-lg pt-7 px-6 text-center overflow-hidden h-60 sm:h-96 md:h-80 2xl:h-80 group md:last:col-span-2 xl:last:col-span-1">
+                  className="border border-gray-300 rounded-lg pt-7 px-6 text-center overflow-hidden h-60 sm:h-96 md:h-80 2xl:h-80 group md:last:col-span-2 xl:last:col-span-1"
+                >
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition duration-300 hover:text-orange">
+                    className="transition duration-300 hover:text-orange"
+                  >
                     <h3 className="font-semibold text-lg sm:text-xl text-black-500">
                       {item.title}
                     </h3>
@@ -118,13 +121,17 @@ const Home = () => {
           <div className="text-center mt-5 md:mt-8">
             <Link href="/project">
               <a className="text-gray-500 text-xs md:text-sm hover:text-orange transition">
-                View all projects <i className="fas fa-chevron-right ml-1"></i>
+                View all projects <i className="fas fa-chevron-right ml-1" />
               </a>
             </Link>
           </div>
         </Section>
 
-        <Section title="GET IN TOUCH" near className="text-center bg-gray-100">
+        <Section
+          title="GET IN TOUCH"
+          smallSection
+          className="text-center bg-gray-100"
+        >
           <p className="max-w-[250px] md:max-w-[400px] text-center mx-auto text-gray-500 mb-5 md:mb-8 text-xs md:text-sm">
             Is there anything I can help you with? My inbox and social media are
             always open to you, feel free to ask, I will try my best for you.

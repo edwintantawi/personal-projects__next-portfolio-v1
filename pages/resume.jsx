@@ -17,9 +17,33 @@ const Resume = () => {
           title="Resume"
           description="explore my experiences, rewards, and education, as well as my activeness"
         />
-        <Section className="pt-2 md:pt-2">
+        <Section
+          title="Courses i completed"
+          smallSection
+          align="left"
+          className="pt-2 md:pt-2"
+        >
           <div id="timeline-tree">
-            {dataSite.resume.map((item, index) => (
+            {dataSite.courses.map((item, index) => (
+              <Timeline
+                key={index}
+                timestamp={item.timestamp}
+                title={item.title}
+                subtitle={item.subtitle}
+                descriptions={item.descriptions}
+                list={item.list}
+              />
+            ))}
+          </div>
+        </Section>
+        <Section
+          title="Educational level"
+          smallSection
+          align="left"
+          className="pt-2 md:pt-2"
+        >
+          <div id="timeline-tree">
+            {dataSite.education.map((item, index) => (
               <Timeline
                 key={index}
                 timestamp={item.timestamp}

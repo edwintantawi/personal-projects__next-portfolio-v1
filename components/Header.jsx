@@ -1,6 +1,6 @@
 const Header = ({ title, description }) => {
   return (
-    <header className="flex items-center pt-8 md:pt-10">
+    <header className="flex items-center py-8 py-10">
       <div className="container px-3 mx-auto text-center md:text-left">
         <h1 className="font-bold text-black-900 text-4xl sm:text-6xl lg:text-7xl">
           {title}
