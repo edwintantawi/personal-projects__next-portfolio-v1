@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" mx-auto p-4 lg:p-6 sticky top-0 z-50 w-full bg-white shadow-sm">
+    <nav className=" mx-auto p-4 lg:p-6 sticky top-0 z-50 w-full bg-white">
       <div className="flex justify-between container-sm sm:container">
         <Link href="/">
           <a className="flex">
@@ -59,21 +59,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/* <ul
-          className={`${
-            isActiveMenu ? 'translate-y-0' : 'translate-y-[100vh]'
-          } transform w-full md:w-auto bg-gray-50 bg-opacity-90 backdrop-filter backdrop-blur-sm p-3 py-8 md:p-0 border-t-2 border-orange
-          md:border-none transition duration-500 flex flex-col md:flex-row fixed md:static bottom-0 right-0 md:space-x-10 md:translate-y-0 space-y-5 md:space-y-0`}>
-          {dataSite.naviagtion.map((link, index) => (
-            <li key={index} className="flex items-center justify-center">
-              <Link href={link.url}>
-                <a className={`${route === link.url && 'link-active'}`}>
-                  {link.title}
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul> */}
       </div>
       <a
         href="#"

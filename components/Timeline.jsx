@@ -1,17 +1,4 @@
 const Timeline = ({ timestamp, title, subtitle, list, descriptions }) => {
-  const levelColor = (level) => {
-    switch (level) {
-      case 'Beginner':
-        return 'green';
-      case 'Intermediate':
-        return 'purple';
-      case 'Expert':
-        return 'red';
-      default:
-        return 'black';
-    }
-  };
-
   return (
     <div className="flex flex-col px-6 py-6 border-l-2">
       <div className="relative mb-3">
@@ -20,7 +7,7 @@ const Timeline = ({ timestamp, title, subtitle, list, descriptions }) => {
           {timestamp}
         </span>
       </div>
-      <div className="grid grid-cols-1 gap-y-4 gap-x-0 lg:gap-x-10 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-y-2 gap-x-0 lg:gap-x-10 lg:grid-cols-4">
         <div>
           <h3 className="text-base font-semibold">{title}</h3>
           <span className="block text-xs md:text-sm text-orange">
@@ -38,12 +25,7 @@ const Timeline = ({ timestamp, title, subtitle, list, descriptions }) => {
             {list.map((item, index) => (
               <li key={index} className="mb-2">
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  {/*<span*/}
-                  {/*  style={{ color: levelColor(item.level) }}*/}
-                  {/*  className="font-semibold">*/}
-                  {/*  [ {item.level} ]*/}
-                  {/*</span>{' '}*/}
-                  <span className="text-gray-500 hover:text-orange transition duration-300">
+                  <span className="text-gray-500 hover:text-black-900 transition duration-300">
                     {item.title} <i className="fas fa-link" />
                   </span>
                 </a>

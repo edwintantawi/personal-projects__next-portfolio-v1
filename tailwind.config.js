@@ -10,8 +10,9 @@ module.exports = {
         orange: '#E76F00',
       },
       backgroundImage: () => ({
-        'orange-gradient': 'linear-gradient(to right, #FFA800, #E76F00)',
+        'orange-gradient': 'linear-gradient(to right, #E76F00, #FFA800)',
         hero: 'url("/hero.svg")',
+        resume: 'url("/resume.jpg")',
       }),
       screens: {
         xs: '500px',
@@ -32,5 +33,19 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          '@screen lg': {
+            maxWidth: '900px',
+          },
+          '@screen xl': {
+            maxWidth: '1200px',
+          },
+        },
+      });
+    },
+  ],
 };

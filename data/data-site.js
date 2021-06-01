@@ -5,10 +5,10 @@ const dataSite = {
     { title: 'Project', url: '/project', icon: 'fas fa-tools' },
     {
       title: 'About',
-      url: '/aboutme',
+      url: '/about',
       icon: 'fas fa-user-circle',
     },
-    { title: 'Contact', url: '/contactme', icon: 'fas fa-address-card' },
+    { title: 'Contact', url: '/contact', icon: 'fas fa-address-card' },
   ],
   hero: {
     name: 'Edwin Tantawi',
@@ -176,7 +176,7 @@ const dataSite = {
       ],
     },
   ],
-  education: [
+  educations: [
     {
       timestamp: '2020 - Present',
       title: 'STMIK Mikroskil',
@@ -209,6 +209,16 @@ const dataSite = {
       subtitle: 'Elementary school',
       descriptions:
         'Demanding knowledge at the Methodist Tamora Elementary school, Indonesia.',
+      list: [],
+    },
+  ],
+  works: [
+    {
+      timestamp: 'Present',
+      title: 'Develop personal projects',
+      subtitle: 'Learning Progress',
+      descriptions:
+        'Learn and gain skills through formal schools, online courses, and work on personal projects to hone skills',
       list: [],
     },
   ],

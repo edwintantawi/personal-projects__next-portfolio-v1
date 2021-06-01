@@ -5,6 +5,7 @@ import dataSite from '../data/data-site';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
 import PageWraper from '../components/PageWraper';
+import Card from '../components/Card';
 
 const Home = () => {
   return (
@@ -95,27 +96,11 @@ const Home = () => {
             {dataSite.projects
               .filter((filteredItem) => filteredItem.top)
               .map((item) => (
-                <div
-                  key={item.title}
-                  className="border border-gray-300 rounded-lg pt-7 px-6 text-center overflow-hidden h-60 sm:h-96 md:h-80 2xl:h-80 group md:last:col-span-2 xl:last:col-span-1"
-                >
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition duration-300 hover:text-orange"
-                  >
-                    <h3 className="font-semibold text-lg sm:text-xl text-black-500">
-                      {item.title}
-                    </h3>
-                  </a>
-                  <p className="text-xs text-gray-500 mb-4">{item.stack}</p>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="min-w-full shadow-card w-full transform translate-y-8 transition duration-500 group-hover:translate-y-2"
-                  />
-                </div>
+                <Card
+                  title={item.title}
+                  stack={item.stack}
+                  image={item.image}
+                />
               ))}
           </div>
           <div className="text-center mt-5 md:mt-8">
@@ -127,11 +112,7 @@ const Home = () => {
           </div>
         </Section>
 
-        <Section
-          title="GET IN TOUCH"
-          smallSection
-          className="text-center bg-gray-100"
-        >
+        <Section title="GET IN TOUCH" className="text-center bg-gray-100">
           <p className="max-w-[250px] md:max-w-[400px] text-center mx-auto text-gray-500 mb-5 md:mb-8 text-xs md:text-sm">
             Is there anything I can help you with? My inbox and social media are
             always open to you, feel free to ask, I will try my best for you.
