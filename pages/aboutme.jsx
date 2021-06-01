@@ -7,7 +7,7 @@ import PageWraper from '../components/PageWraper';
 const AboutMe = () => {
   return (
     <PageWraper>
-      <PageHead title="Edwin Tantawi | Project" />
+      <PageHead title="Edwin Tantawi | About" />
       <Navbar />
       <main className="flex-grow">
         <Header

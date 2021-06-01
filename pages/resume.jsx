@@ -10,7 +10,7 @@ import dataSite from '../data/data-site';
 const Resume = () => {
   return (
     <PageWraper>
-      <PageHead title="Edwin Tantawi | Project" />
+      <PageHead title="Edwin Tantawi | Resume" />
       <Navbar />
       <main className="flex-grow">
         <Header
