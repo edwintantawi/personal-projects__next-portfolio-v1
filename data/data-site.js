@@ -120,13 +120,12 @@ const dataSite = {
       link: 'https://clone-google-web.netlify.app/',
     },
   ],
-  resume: [
+  courses: [
     {
-      timestamp: '11-May-2021 - Present',
+      timestamp: '11 May 2021 - Present',
       title: 'IDCamp 2021',
       subtitle: 'Back-end Learning Path',
-      descriptions:
-        'Take a scholarship to study Programming at Dicoding Academy from Indosat',
+      descriptions: '',
       list: [
         {
           title: 'Belajar Dasar Pemrograman JavaScript',
@@ -141,11 +140,10 @@ const dataSite = {
       ],
     },
     {
-      timestamp: '28-Apr-2021 - 10-May-2021',
+      timestamp: '28 Apr 2021 - 10 May 2021',
       title: 'Baparekraf Development Day 2021',
       subtitle: 'Front-End Learning Path',
-      descriptions:
-        'Take a scholarship to study Programming at Dicoding Academy from Baparekraf Development Day',
+      descriptions: '',
       list: [
         {
           title: 'Menjadi Front-End Web Developer Expert',
@@ -154,22 +152,69 @@ const dataSite = {
         },
       ],
     },
+    {
+      timestamp: '20 Jul 2020 - 9 Aug 2020',
+      title: 'Baparekraf Development Day 2020',
+      subtitle: 'Front-End Learning Path',
+      descriptions: '',
+      list: [
+        {
+          title: 'Belajar Dasar Pemrograman Web',
+          level: 'Beginner',
+          link: 'https://www.dicoding.com/certificates/1RXY46WJ9PVM',
+        },
+        {
+          title: 'Belajar Fundamental Front-End Web Development',
+          level: 'Intermediate',
+          link: 'https://www.dicoding.com/certificates/JMZVM9OJ3ZN9',
+        },
+        {
+          title: 'Membangun Progressive Web Apps',
+          level: 'Expert',
+          link: 'https://www.dicoding.com/certificates/JMZVM9OJNZN9',
+        },
+      ],
+    },
+  ],
+  education: [
+    {
+      timestamp: '2020 - Present',
+      title: 'STMIK Mikroskil',
+      subtitle: 'College',
+      descriptions:
+        'Studying at STMIK Mikroskil, Indonesia by majoring in Informatics Engineering',
+      list: [],
+    },
+    {
+      timestamp: '2017 - 2020',
+      title: 'SMK Methodist Tamora',
+      subtitle: 'Vocational High School',
+      descriptions:
+        'Demanding knowledge at the Methodist Junior high school Vocational School, Indonesia. By' +
+        ' majoring in Computer Network Engineering',
+      list: [],
+    },
+    {
+      timestamp: '2014 - 2017',
+      title: 'SMP Mehodist Tamora',
+      subtitle: 'Junior high school',
+      descriptions:
+        'Demanding knowledge at the Methodist Tamora Junior high school, Indonesia.' +
+        ' Network Engineering',
+      list: [],
+    },
+    {
+      timestamp: '2008 - 2014',
+      title: 'SD Mehodist Tamora',
+      subtitle: 'Elementary school',
+      descriptions:
+        'Demanding knowledge at the Methodist Tamora Elementary school, Indonesia.',
+      list: [],
+    },
   ],
 };
 
 export default dataSite;
-// {
-//   dataSite.resume.map((item, index) => (
-//     <Timeline
-//       timestamp={item.timestamp}
-//       title={item.title}
-//       subtitle={item.subtitle}
-//       descriptions={item.descriptions}
-//       list={item.list}
-//     />
-//   ));
-// }
-
 // timestamp="20-Jul-2020 - 9-Aug-2020"
 //           title="Baparekraf Development Day 2020"
 //           subTitle="Front-End Learning Path [ Beginer, intermediate ]"
